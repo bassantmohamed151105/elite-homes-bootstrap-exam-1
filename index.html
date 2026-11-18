@@ -15,9 +15,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#mainNavbar"
+    data-bs-offset="90"
+    tabindex="0"
+  >
     <div class="bg-white border-bottom border-light fixed-top shadow-sm">
-      <nav class="navbar navbar-expand-lg py-3">
+      <nav id="mainNavbar" class="navbar navbar-expand-lg py-3">
         <div class="container-fluid px-3">
           <span class="navbar-brand fw-bold lh-32 fs-24 color-black"
             >EliteHomes</span
@@ -41,14 +46,14 @@
                 <a
                   class="nav-link active px-0 mx-2 fw-semibold fs-6"
                   aria-current="page"
-                  href="#hero-section"
+                  href="#hero"
                   >Home</a
                 >
               </li>
               <li class="nav-item dropdown position-static">
                 <a
                   class="nav-link px-0 mx-2 dropdown-toggle fs-6"
-                  href="#"
+                  href="#properties"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -67,7 +72,7 @@
                         </h3>
                         <div class="d-flex flex-column gap-2">
                           <a
-                            href="#"
+                            href="#properties"
                             class="d-flex align-items-center text-decoration-none p-2 rounded custom-hover-link"
                           >
                             <img
@@ -316,16 +321,18 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0 mx-2 fs-6" href="#">Services</a>
+                <a class="nav-link px-0 mx-2 fs-6" href="#services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0 mx-2 fs-6" href="#">Testimonials</a>
+                <a class="nav-link px-0 mx-2 fs-6" href="#testimonials"
+                  >Testimonials</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0 mx-2 fs-6" href="#">FAQ</a>
+                <a class="nav-link px-0 mx-2 fs-6" href="#faq">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link px-0 mx-2 fs-6" href="#">Contact</a>
+                <a class="nav-link px-0 mx-2 fs-6" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -569,7 +576,7 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <a class="btn btn-main px-4" href=""
+          <a class="btn btn-main px-4" href="#contact"
             >View All Properties <i class="bi bi-arrow-right ms-2"></i
           ></a>
         </div>
@@ -640,7 +647,8 @@
             </button>
           </li>
         </ul>
-        <div class="tab-content">
+        <div class="tab-content" id="serviceTabsContent">
+          <!-- Tab 1: Buying -->
           <div class="tab-pane fade show active" id="buying">
             <div class="row align-items-center g-4">
               <div class="col-lg-6">
@@ -669,8 +677,10 @@
                       <i class="bi bi-calculator"></i>
                     </div>
                     <div>
-                      <h6>Financial Planning</h6>
-                      <p>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Financial Planning
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
                         Get pre-approved for mortgages and understand your
                         budget with our financial experts.
                       </p>
@@ -681,14 +691,18 @@
                       <i class="bi bi-handshake"></i>
                     </div>
                     <div>
-                      <h6>Negotiation Support</h6>
-                      <p>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Negotiation Support
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
                         Our skilled negotiators ensure you get the best possible
                         deal on your dream home.
                       </p>
                     </div>
                   </div>
-                  <a href="" class="btn btn-main mt-2">Start Your Search</a>
+                  <a href="#contact" class="btn btn-main mt-2"
+                    >Start Your Search</a
+                  >
                 </div>
               </div>
               <div class="col-lg-6">
@@ -699,6 +713,290 @@
                 />
                 <div class="success-float">
                   <strong>98%</strong><small>Success Rate</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Selling -->
+          <div class="tab-pane fade" id="selling">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6">
+                <div class="service-content">
+                  <h3 class="fw-bold text-dark-slate fs-30 lh-36 mb-3">
+                    Maximize Your Home's Value
+                  </h3>
+                  <p class="fw-normal fs-18 lh-28 text-slate-gray mb-4">
+                    Sell your property faster and for top dollar with our
+                    data-driven pricing, staging, and targeted marketing.
+                  </p>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Accurate Home Valuation
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Comprehensive market analysis to set the optimal listing
+                        price for your property.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-camera-reels"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Premium Marketing & Staging
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Professional photography, virtual tours, and digital
+                        campaigns to attract qualified buyers.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-file-earmark-check"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Seamless Closing Process
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Full contract handling, inspection coordination, and
+                        smooth legal closing.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#contact" class="btn btn-main mt-2"
+                    >Get Free Valuation</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  class="service-image"
+                  src="img/44a2b4228c-b0676a32c7b4aac7109e.png"
+                  alt="Luxury property sold"
+                />
+                <div class="success-float">
+                  <strong>21 Days</strong><small>Avg. Time on Market</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Renting -->
+          <div class="tab-pane fade" id="renting">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6">
+                <div class="service-content">
+                  <h3 class="fw-bold text-dark-slate fs-30 lh-36 mb-3">
+                    Hassle-Free Rental Solutions
+                  </h3>
+                  <p class="fw-normal fs-18 lh-28 text-slate-gray mb-4">
+                    Whether you're searching for a luxury apartment or leasing
+                    out your property, we handle every detail.
+                  </p>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Verified Tenant Screening
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Thorough background, credit, and income verification for
+                        complete peace of mind.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Flexible Lease Terms
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Short-term corporate stays and long-term residential
+                        leases tailored to your schedule.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon"><i class="bi bi-tools"></i></div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        24/7 Property Management
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Dedicated maintenance support and automated rent
+                        collection for landlords.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#properties" class="btn btn-main mt-2"
+                    >Browse Rentals</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  class="service-image"
+                  src="img/9abf95526e-b58dacd391ff334a4f94.png"
+                  alt="Modern rental apartment"
+                />
+                <div class="success-float">
+                  <strong>1,200+</strong><small>Managed Units</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Investing -->
+          <div class="tab-pane fade" id="investing">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6">
+                <div class="service-content">
+                  <h3 class="fw-bold text-dark-slate fs-30 lh-36 mb-3">
+                    Strategic Real Estate Investing
+                  </h3>
+                  <p class="fw-normal fs-18 lh-28 text-slate-gray mb-4">
+                    Build long-term wealth with high-yield residential and
+                    multi-family investment opportunities.
+                  </p>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-pie-chart"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        ROI & Cash Flow Analysis
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Detailed cap-rate projections, rental yield forecasts,
+                        and appreciation modeling.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon"><i class="bi bi-gem"></i></div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Off-Market Opportunities
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Early access to pre-construction developments and
+                        exclusive pocket listings.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Portfolio Diversification
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Expert advisory services for multi-property acquisition
+                        and wealth management.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#contact" class="btn btn-main mt-2"
+                    >Consult an Advisor</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  class="service-image"
+                  src="img/9de64e0402-e6e4f4618e73933f51bc.png"
+                  alt="High-value investment property"
+                />
+                <div class="success-float">
+                  <strong>14.5%</strong><small>Avg. Annual ROI</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5: Commercial -->
+          <div class="tab-pane fade" id="commercial">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-6">
+                <div class="service-content">
+                  <h3 class="fw-bold text-dark-slate fs-30 lh-36 mb-3">
+                    Commercial Real Estate Excellence
+                  </h3>
+                  <p class="fw-normal fs-18 lh-28 text-slate-gray mb-4">
+                    Find the ideal office, retail, or industrial space to scale
+                    your business in prime locations.
+                  </p>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-buildings"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Office & Retail Spaces
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Class-A corporate headquarters, boutique storefronts,
+                        and mixed-use developments.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Site Selection & Zoning
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Demographic foot-traffic studies, zoning compliance, and
+                        feasibility assessments.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="service-item">
+                    <div class="service-icon">
+                      <i class="bi bi-file-text"></i>
+                    </div>
+                    <div>
+                      <h4 class="fw-semibold fs-20 lh-28 text-dark-slate mb-1">
+                        Commercial Lease Negotiation
+                      </h4>
+                      <p class="fw-normal fs-16 lh-24 text-slate-gray m-0">
+                        Structuring commercial leases, tenant allowances, and
+                        flexible renewal options.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="#contact" class="btn btn-main mt-2"
+                    >Explore Commercial</a
+                  >
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <img
+                  class="service-image"
+                  src="img/photo-1600585154340-be6161a56a0c.jpg"
+                  alt="Modern commercial building"
+                />
+                <div class="success-float">
+                  <strong>3.5M+</strong><small>Sq Ft Leased</small>
                 </div>
               </div>
             </div>
@@ -716,7 +1014,11 @@
             EliteHomes
           </p>
         </div>
-        <div id="reviewCarousel" class="carousel slide" data-bs-ride="false">
+        <div
+          id="reviewCarousel"
+          class="carousel slide pb-5"
+          data-bs-ride="false"
+        >
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="review-card">
@@ -1085,15 +1387,20 @@
             </div>
           </div>
         </div>
-        <div class="contact-info" id="contactInfo">
-          <h5>Contact Information</h5>
-          <div class="row">
-            <div class="col-md-6">
+        <div class="row g-4 mt-4 align-items-stretch">
+          <!-- العمود الأول: بيانات التواصل -->
+          <div class="col-lg-5">
+            <div class="contact-info h-100 mt-0" id="contactInfo">
+              <h5>Contact Information</h5>
+              <p class="text-secondary small mb-4">
+                Have questions about a property or want to schedule a private
+                consultation? Reach out directly or fill out the form.
+              </p>
               <div class="info-row">
                 <i class="bi bi-geo-alt-fill"></i>
                 <div>
-                  <strong>Address</strong
-                  ><small
+                  <strong>Address</strong>
+                  <small
                     >1234 Luxury Boulevard<br />Beverly Hills, CA 90210</small
                   >
                 </div>
@@ -1101,24 +1408,141 @@
               <div class="info-row">
                 <i class="bi bi-telephone-fill"></i>
                 <div>
-                  <strong>Phone</strong><small>+1 (555) 123-4567</small>
+                  <strong>Phone</strong>
+                  <small>+1 (555) 123-4567</small>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
               <div class="info-row">
                 <i class="bi bi-envelope-fill"></i>
                 <div>
-                  <strong>Email</strong><small>info@elitehomes.com</small>
+                  <strong>Email</strong>
+                  <small>info@elitehomes.com</small>
                 </div>
               </div>
               <div class="info-row">
                 <i class="bi bi-clock-fill"></i>
                 <div>
-                  <strong>Business Hours</strong
-                  ><small>Monday - Friday: 8:00 AM - 5:00 PM</small>
+                  <strong>Business Hours</strong>
+                  <small>Monday - Friday: 8:00 AM - 5:00 PM</small>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <!-- العمود الثاني: نموذج التواصل (Contact Us Form) -->
+          <div class="col-lg-7">
+            <div class="contact-form-card h-100" id="contactForm">
+              <h5 class="fw-bold mb-1">Send Us a Message</h5>
+              <p class="text-secondary small mb-4">
+                Fill out the form below and one of our real estate specialists
+                will get back to you shortly.
+              </p>
+              <form
+                onsubmit="
+                  event.preventDefault();
+                  alert('Thank you! Your message has been sent to EliteHomes.');
+                "
+              >
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label fw-medium small"
+                      >First Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      placeholder="John"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label fw-medium small"
+                      >Last Name *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      placeholder="Doe"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactEmail" class="form-label fw-medium small"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="contactEmail"
+                      placeholder="john@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactPhone" class="form-label fw-medium small"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="contactPhone"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                  <div class="col-12">
+                    <label
+                      for="interestTopic"
+                      class="form-label fw-medium small"
+                      >I'm Interested In</label
+                    >
+                    <select class="form-select" id="interestTopic">
+                      <option selected>Buying a Property</option>
+                      <option>Selling a Property</option>
+                      <option>Renting / Leasing</option>
+                      <option>Real Estate Investment</option>
+                      <option>Schedule a Property Tour</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label
+                      for="contactMessage"
+                      class="form-label fw-medium small"
+                      >Message *</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="contactMessage"
+                      rows="4"
+                      placeholder="Tell us about your dream home, preferred location, or budget..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="agreeTerms"
+                        required
+                      />
+                      <label
+                        class="form-check-label small text-secondary"
+                        for="agreeTerms"
+                      >
+                        I agree to receive property updates and communications
+                        from EliteHomes.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-main w-100">
+                      <i class="bi bi-send-fill me-2"></i>Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -1128,7 +1552,7 @@
       <div class="container">
         <div class="row g-4">
           <div class="col-lg-4">
-            <a class="footer-brand" href="#home">EliteHomes</a>
+            <a class="footer-brand" href="#hero">EliteHomes</a>
             <p class="mt-3 text-white-50 lh-lg">
               Your trusted partner in finding the perfect property. Discover
               exceptional homes and personalized real estate services with
